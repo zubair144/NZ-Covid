@@ -21,9 +21,9 @@ jobs:
         git fetch power main 
         git checkout main
         git merge power/main --allow-unrelated-histories
-        git pull origin main
+        git add .
         git commit -m "new updates"
-        git push origin main
+        
         
 
         
