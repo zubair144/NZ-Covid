@@ -20,6 +20,7 @@ jobs:
         git remote add power https://github.com/minhealthnz/nz-covid-data.git
         git fetch power main 
         git checkout main
+        git rm -r locations-of-interest
         git merge power/main --allow-unrelated-histories
         git push
         
