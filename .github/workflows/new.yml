@@ -19,6 +19,7 @@ jobs:
         git pull power main
         
         git rm -rf locations-of-interest
+        git rebase --continue
         git commit -m "removed prev folder"
         git push -f origin main
         
