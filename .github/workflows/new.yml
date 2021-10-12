@@ -17,7 +17,9 @@ jobs:
         git config pull.rebase true
         git remote add power https://github.com/minhealthnz/nz-covid-data.git
         git pull power main
-                
+        
+        git rm -rf locations-of-interest
+        git commit -m "removed prev folder"
         git push -f origin main
         
         
