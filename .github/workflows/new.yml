@@ -1,24 +1,22 @@
 # .github/workflows/example.yml
 
-name: Merge upstream branches
+name: Updated Covid Data
 on:
   push:
-    branches:
-      main
-     # actually, ~5 minutes is the highest schedule:
-     # effective frequency you will get - cron:  '* * * * *'
+    branches: main
     
 jobs:
   auto-pull:
-    name: PullOriginBranchYY
+    name: Pull Source Banch
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - run: |
         git config --global user.email "zubair144@hotmail.com"
         git config --global user.name "zubair144"
+        
         git remote add power https://github.com/minhealthnz/nz-covid-data.git
-        git fetch power main 
+        git fetch power main         
         git checkout main
         git merge power/main --allow-unrelated-histories
         git push
