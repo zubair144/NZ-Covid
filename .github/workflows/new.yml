@@ -1,0 +1,37 @@
+# .github/workflows/example.yml
+
+name: Updated Covid Data
+on:
+  push:
+    branches: main
+    
+jobs:
+  auto-pull:
+    name: Pull Source Banch
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        git config --global user.email "zubair144@hotmail.com"
+        git config --global user.name "zubair144"
+        
+        git remote add source https://github.com/minhealthnz/nz-covid-data.git
+      
+        git fetch source main
+        
+        git rm -rf locations-of-interest
+        git rm -rf vaccine-data
+        git add .
+        git commit -m "del prev"
+        
+        git merge source/main --allow-unrelated-histories
+        
+        git push
+        
+        
+
+        
+ 
+        
+        
+  
