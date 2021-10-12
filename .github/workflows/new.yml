@@ -19,6 +19,11 @@ jobs:
       
         git fetch source main
         
+        git rm -rf locations-of-interest
+        git rm -rf vaccine-data
+        git add .
+        git commit -m "del prev"
+        
         git merge source/main --allow-unrelated-histories
         
         git push
