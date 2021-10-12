@@ -16,7 +16,7 @@ jobs:
         git config --global user.name "zubair144"
         
         git remote add power https://github.com/minhealthnz/nz-covid-data.git
-        git pull power main -all
+        git pull power main --all
                 
         git push -f origin main
         
