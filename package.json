@@ -1,0 +1,22 @@
+{
+  "name": "nz-covid",
+  "version": "1.0.0",
+  "description": "The `locations-of-interest` folder contains machine readable and geocoded locations of interest for COVID-19 outbreaks in New Zealand.",
+  "main": "parsejson.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zubair144/NZ-Covid.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zubair144/NZ-Covid/issues"
+  },
+  "homepage": "https://github.com/zubair144/NZ-Covid#readme",
+  "dependencies": {
+    "json2csv": "^5.0.6"
+  }
+}
